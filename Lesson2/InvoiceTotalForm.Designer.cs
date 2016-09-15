@@ -1,6 +1,6 @@
 ﻿namespace Lesson2
 {
-    partial class Form1
+    partial class InvoiceTotalForm
     {
         /// <summary>
         /// Required designer variable.
@@ -92,6 +92,7 @@
             this.DiscountPercentTextBox.ReadOnly = true;
             this.DiscountPercentTextBox.Size = new System.Drawing.Size(94, 22);
             this.DiscountPercentTextBox.TabIndex = 5;
+            this.DiscountPercentTextBox.Text = "10.0%";
             // 
             // DiscountAmountTextBox
             // 
@@ -117,6 +118,7 @@
             this.CalculateButton.TabIndex = 8;
             this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // ExitButton
             // 
@@ -126,8 +128,9 @@
             this.ExitButton.TabIndex = 9;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // Form1
+            // InvoiceTotalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,7 +145,7 @@
             this.Controls.Add(this.DiscountAmountLabel);
             this.Controls.Add(this.DiscountPercentLabel);
             this.Controls.Add(this.SubTotalLabel);
-            this.Name = "Form1";
+            this.Name = "InvoiceTotalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice Total";
             this.ResumeLayout(false);
